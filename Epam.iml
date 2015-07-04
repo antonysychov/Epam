@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="EclipseLink" />
+        <datasource-mapping>
+          <factory-entry name="Library" value="e949829b-a849-4143-97c8-90d6545556ad" />
+          <factory-entry name="User" value="e949829b-a849-4143-97c8-90d6545556ad" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/persistance.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork10" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork11" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork12" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork13/Task1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork13/Task2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork13/Task4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork13/Task6" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork13/Task7" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork14" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork14/Task3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork14/Task4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork14/Task5" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork15" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork16" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork2/Task1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork2/Task3" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork2/Task4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork3/Task1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork3/Task2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork3/backup" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork4" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork5" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork6" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork7" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork7/Task1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork7/Task2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork8" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork8/Task1" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork8/Task2" />
+      <excludeFolder url="file://$MODULE_DIR$/src/HomeWork/HomeWork9" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="JPA 1.0-JPA 1.0" level="project" />
+    <orderEntry type="library" name="javax.xml:jaxb-impl:2.1" level="project" />
+    <orderEntry type="library" name="log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:3.0.10" level="project" />
+  </component>
+</module>

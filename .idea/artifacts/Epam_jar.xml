@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Epam:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Epam_jar</output-path>
+    <root id="archive" name="Epam.jar">
+      <element id="module-output" name="Epam" />
+    </root>
+  </artifact>
+</component>

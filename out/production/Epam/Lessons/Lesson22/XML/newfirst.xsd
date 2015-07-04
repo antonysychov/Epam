@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://aaa.com/Purchase">
+    <xs:complexType name="TypeOfBirth">
+        <xs:sequence>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="country">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Ukraine"/>
+                        <xs:enumeration value="USA"/>
+                    </xs:restriction>
+                </xs:simpleType> 
+            </xs:element>
+            
+        </xs:sequence>      
+        
+    </xs:complexType>  
+</xs:schema>

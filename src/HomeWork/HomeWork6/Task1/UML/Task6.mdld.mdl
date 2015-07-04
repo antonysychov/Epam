@@ -1,0 +1,2598 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"552A89AA0011"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"552A89AA0013"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Читатель"
+		quid       	"552A8D9301A0"
+		stereotype 	"Actor")
+	    (object Class "База данных"
+		quid       	"552A8F97007D"
+		stereotype 	"Actor"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552E474203A2"
+			supplier   	"Use Case View::Работа с каталогом"
+			quidu      	"552AE97F0040")
+		    (object Dependency_Relationship
+			quid       	"552E475A0323"
+			supplier   	"Use Case View::Обновление каталога"
+			quidu      	"552E474401AE")))
+	    (object Class "Каталог библиотеки"
+		quid       	"552ADD580090"
+		stereotype 	"Actor")
+	    (object Class "Администратор"
+		quid       	"552AE9450043"
+		stereotype 	"Actor")
+	    (object UseCase "Выбор книги"
+		quid       	"552A8EF90381")
+	    (object UseCase "Возврат книги"
+		quid       	"552A902A0094"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552AE8C3029A"
+			supplier   	"Use Case View::Изменение БД"
+			quidu      	"552AE8AD03CD")
+		    (object Dependency_Relationship
+			quid       	"552E4702006C"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object UseCase "Проверка регистрации"
+		quid       	"552AA2020142")
+	    (object UseCase "Авторизация"
+		quid       	"552AA2D803DB"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552AE0E001C9"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")
+		    (object Dependency_Relationship
+			quid       	"552AE13603D6"
+			supplier   	"Use Case View::Занесение читателя в базу данных"
+			quidu      	"552AE0F5013A")))
+	    (object UseCase "Регистрация"
+		quid       	"552ADEDA0234"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552AE0C60148"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")
+		    (object Dependency_Relationship
+			quid       	"552AE1340203"
+			supplier   	"Use Case View::Проверка наличия читателя в БД"
+			quidu      	"552AE0F20277")))
+	    (object UseCase "Проверка наличия читателя в БД"
+		quid       	"552AE0F20277")
+	    (object UseCase "Занесение читателя в базу данных"
+		quid       	"552AE0F5013A")
+	    (object UseCase "Заказ книги"
+		quid       	"552AE4C502BC"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552AE75300B2"
+			supplier   	"Use Case View::Изменение БД"
+			quidu      	"552AE8AD03CD")
+		    (object Dependency_Relationship
+			quid       	"552E470A00CB"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object UseCase "NewUseCase"
+		quid       	"552AE82E0194")
+	    (object UseCase "Изменение БД"
+		quid       	"552AE8AD03CD"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552AEA0400AA"
+			supplier   	"Use Case View::Изменение каталога"
+			quidu      	"552AE9FB029B")))
+	    (object UseCase "Работа с каталогом"
+		quid       	"552AE97F0040"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552E82F3022D"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object UseCase "Изменение каталога"
+		quid       	"552AE9FB029B")
+	    (object UseCase "NewUseCase2"
+		quid       	"552AEB78012C")
+	    (object UseCase "Запрос отчетов по книгам"
+		quid       	"552AEBFE03A3"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552E45B20396"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object UseCase "Просмотр каталога"
+		quid       	"552E43E0034C")
+	    (object UseCase "Заказ"
+		quid       	"552E465B0142")
+	    (object UseCase "Обновление каталога"
+		quid       	"552E474401AE")
+	    (object UseCase "Работа с базой"
+		quid       	"552E7D3D0019"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"552E7D56000B"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object UseCase "Формирование заказа"
+		quid       	"5537B4F701F6"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5537B50A017D"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object Association "$UNNAMED$0"
+		quid       	"552A8EFE006D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"552A8EFE0386"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"552A8EFE0395"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$3"
+		quid       	"552A8FD40293"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"552A8FD5013C"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"552A8FD5014B"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object Association "$UNNAMED$6"
+		quid       	"552A902D0013"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"552A902D02D2"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094")
+		    (object Role "$UNNAMED$8"
+			quid       	"552A902D02D4"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$9"
+		quid       	"552A90320050"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"552A903202E0"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"552A903202E2"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094")))
+	    (object Association "$UNNAMED$12"
+		quid       	"552AA20603A5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"552AA2070310"
+			supplier   	"Use Case View::Проверка регистрации"
+			quidu      	"552AA2020142"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"552AA2070312"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381")))
+	    (object Association "$UNNAMED$15"
+		quid       	"552AA25B00D7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"552AA25C0397"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"552AA25C0399"
+			supplier   	"Use Case View::Проверка регистрации"
+			quidu      	"552AA2020142")))
+	    (object Association "$UNNAMED$18"
+		quid       	"552AA2E90177"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"552AA2EA003D"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")
+		    (object Role "$UNNAMED$20"
+			quid       	"552AA2EA003F"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$21"
+		quid       	"552AA2EC0208"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"552AA2ED02E7"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"552AA2ED02E9"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")))
+	    (object Association "$UNNAMED$24"
+		quid       	"552ADE1501FD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"552ADE1601CE"
+			supplier   	"Use Case View::Каталог библиотеки"
+			quidu      	"552ADD580090"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"552ADE1601D0"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381")))
+	    (object Association "$UNNAMED$27"
+		quid       	"552ADEE40025"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"552ADEE40382"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"552ADEE40384"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"552ADEDA0234"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$30"
+		quid       	"552ADEFF03B4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"552ADF0103B5"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"552ADF0103B7"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"552ADEDA0234")))
+	    (object Association "$UNNAMED$33"
+		quid       	"552AE168013E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"552AE169011F"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"552AE169012F"
+			supplier   	"Use Case View::Проверка наличия читателя в БД"
+			quidu      	"552AE0F20277")))
+	    (object Association "$UNNAMED$36"
+		quid       	"552AE16C0259"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"552AE16D0120"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"552AE16D0130"
+			supplier   	"Use Case View::Занесение читателя в базу данных"
+			quidu      	"552AE0F5013A")))
+	    (object Association "$UNNAMED$39"
+		quid       	"552AE27F0254"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"552AE280012C"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"552AE280012E"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"552ADEDA0234")))
+	    (object Association "$UNNAMED$42"
+		quid       	"552AE28B01E0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"552AE28C00E7"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"552AE28C00E9"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")))
+	    (object Association "$UNNAMED$45"
+		quid       	"552AE6FE0187"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"552AE6FF00EA"
+			supplier   	"Use Case View::Заказ книги"
+			quidu      	"552AE4C502BC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"552AE6FF00FF"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381")))
+	    (object Association "$UNNAMED$48"
+		quid       	"552AE7550147"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"552AE756001A"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"552AE7560028"
+			supplier   	"Use Case View::Изменение БД"
+			quidu      	"552AE8AD03CD")))
+	    (object Association "$UNNAMED$51"
+		quid       	"552AE7D80027"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$52"
+			quid       	"552AE7D802FA"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$53"
+			quid       	"552AE7D8030C"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")))
+	    (object Association "$UNNAMED$54"
+		quid       	"552AE9660318"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$55"
+			quid       	"552AE96702E6"
+			supplier   	"Use Case View::Регистрация"
+			quidu      	"552ADEDA0234"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$56"
+			quid       	"552AE96702EA"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"552AE9450043")))
+	    (object Association "$UNNAMED$57"
+		quid       	"552AE9850033"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$58"
+			quid       	"552AE98503C2"
+			supplier   	"Use Case View::Работа с каталогом"
+			quidu      	"552AE97F0040"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$59"
+			quid       	"552AE98503C4"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"552AE9450043")))
+	    (object Association "$UNNAMED$60"
+		quid       	"552AE9AC0150"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$61"
+			quid       	"552AE9B200EB"
+			supplier   	"Use Case View::Каталог библиотеки"
+			quidu      	"552ADD580090"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$62"
+			quid       	"552AE9B200F1"
+			supplier   	"Use Case View::Работа с каталогом"
+			quidu      	"552AE97F0040")))
+	    (object Association "$UNNAMED$63"
+		quid       	"552AEA7D0329"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$64"
+			quid       	"552AEA7E0312"
+			supplier   	"Use Case View::Каталог библиотеки"
+			quidu      	"552ADD580090"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$65"
+			quid       	"552AEA7E0318"
+			supplier   	"Use Case View::Изменение каталога"
+			quidu      	"552AE9FB029B")))
+	    (object Association "$UNNAMED$66"
+		quid       	"552AEB820164"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$67"
+			quid       	"552AEB83000D"
+			supplier   	"Use Case View::NewUseCase2"
+			quidu      	"552AEB78012C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$68"
+			quid       	"552AEB83000F"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object Association "$UNNAMED$69"
+		quid       	"552AEC0400D5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$70"
+			quid       	"552AEC050123"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$71"
+			quid       	"552AEC050125"
+			supplier   	"Use Case View::Запрос отчетов по книгам"
+			quidu      	"552AEBFE03A3")))
+	    (object Association "$UNNAMED$72"
+		quid       	"552AEC11006C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$73"
+			quid       	"552AEC1102D4"
+			supplier   	"Use Case View::Запрос отчетов по книгам"
+			quidu      	"552AEBFE03A3"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$74"
+			quid       	"552AEC1102E5"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"552AE9450043")))
+	    (object Association "$UNNAMED$75"
+		quid       	"552E43900369"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$76"
+			quid       	"552E439101F2"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$77"
+			quid       	"552E439101F4"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094")))
+	    (object Association "$UNNAMED$78"
+		quid       	"552E4396018F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$79"
+			quid       	"552E43970018"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$80"
+			quid       	"552E43970028"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$81"
+		quid       	"552E439900A5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$82"
+			quid       	"552E43990349"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$83"
+			quid       	"552E4399034B"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$84"
+		quid       	"552E43CB00AF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$85"
+			quid       	"552E43CF0372"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$86"
+			quid       	"552E43CF0382"
+			supplier   	"Use Case View::Выбор книги"
+			quidu      	"552A8EF90381")))
+	    (object Association "$UNNAMED$87"
+		quid       	"552E43F70280"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$88"
+			quid       	"552E43F80233"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$89"
+			quid       	"552E43F80235"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$90"
+		quid       	"552E43FF0263"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$91"
+			quid       	"552E440000BE"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$92"
+			quid       	"552E440000C0"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C")))
+	    (object Association "$UNNAMED$93"
+		quid       	"552E444E01F3"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$94"
+			quid       	"552E444F0119"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$95"
+			quid       	"552E444F0128"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$96"
+		quid       	"552E44520252"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$97"
+			quid       	"552E4453005E"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$98"
+			quid       	"552E4453006E"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C")))
+	    (object Association "$UNNAMED$99"
+		quid       	"552E445402EF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$100"
+			quid       	"552E4455012A"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$101"
+			quid       	"552E4455012C"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094")))
+	    (object Association "$UNNAMED$102"
+		quid       	"552E45E800D0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$103"
+			quid       	"552E45E802E3"
+			supplier   	"Use Case View::Каталог библиотеки"
+			quidu      	"552ADD580090"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$104"
+			quid       	"552E45E802F3"
+			supplier   	"Use Case View::Работа с каталогом"
+			quidu      	"552AE97F0040")))
+	    (object Association "$UNNAMED$105"
+		quid       	"552E4677021A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$106"
+			quid       	"552E467802E6"
+			supplier   	"Use Case View::Заказ книги"
+			quidu      	"552AE4C502BC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$107"
+			quid       	"552E467802F6"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C")))
+	    (object Association "$UNNAMED$108"
+		quid       	"552E46B60313"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$109"
+			quid       	"552E46B7016D"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$110"
+			quid       	"552E46B7017C"
+			supplier   	"Use Case View::Читатель"
+			quidu      	"552A8D9301A0")))
+	    (object Association "$UNNAMED$111"
+		quid       	"552E46EB0177"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$112"
+			quid       	"552E46EB032C"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$113"
+			quid       	"552E46EB032E"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")))
+	    (object Association "$UNNAMED$114"
+		quid       	"552E46EF0126"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$115"
+			quid       	"552E46EF03A7"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$116"
+			quid       	"552E46EF03B6"
+			supplier   	"Use Case View::Авторизация"
+			quidu      	"552AA2D803DB")))
+	    (object Association "$UNNAMED$117"
+		quid       	"552E46F303C6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$118"
+			quid       	"552E46F4027E"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$119"
+			quid       	"552E46F4028E"
+			supplier   	"Use Case View::Возврат книги"
+			quidu      	"552A902A0094")))
+	    (object Association "$UNNAMED$120"
+		quid       	"552E46F702BD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$121"
+			quid       	"552E46F80108"
+			supplier   	"Use Case View::Заказ книги"
+			quidu      	"552AE4C502BC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$122"
+			quid       	"552E46F8010A"
+			supplier   	"Use Case View::Просмотр каталога"
+			quidu      	"552E43E0034C")))
+	    (object Association "$UNNAMED$123"
+		quid       	"552E46FB00F8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$124"
+			quid       	"552E46FB0353"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$125"
+			quid       	"552E46FB0361"
+			supplier   	"Use Case View::Заказ книги"
+			quidu      	"552AE4C502BC")))
+	    (object Association "$UNNAMED$126"
+		quid       	"552E475201C7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$127"
+			quid       	"552E47530030"
+			supplier   	"Use Case View::Обновление каталога"
+			quidu      	"552E474401AE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$128"
+			quid       	"552E47530032"
+			supplier   	"Use Case View::База данных"
+			quidu      	"552A8F97007D")))
+	    (object Association "$UNNAMED$129"
+		quid       	"552E4760016E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$130"
+			quid       	"552E47620074"
+			supplier   	"Use Case View::Каталог библиотеки"
+			quidu      	"552ADD580090"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$131"
+			quid       	"552E47620076"
+			supplier   	"Use Case View::Обновление каталога"
+			quidu      	"552E474401AE")))
+	    (object Association "$UNNAMED$132"
+		quid       	"552E7D4F0159"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$133"
+			quid       	"552E7D50005D"
+			supplier   	"Use Case View::Работа с базой"
+			quidu      	"552E7D3D0019"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$134"
+			quid       	"552E7D50005F"
+			supplier   	"Use Case View::Администратор"
+			quidu      	"552AE9450043")))
+	    (object Association "$UNNAMED$135"
+		quid       	"5537B503001B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$136"
+			quid       	"5537B5030276"
+			supplier   	"Use Case View::Формирование заказа"
+			quidu      	"5537B4F701F6"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$137"
+			quid       	"5537B5030278"
+			supplier   	"Use Case View::Заказ книги"
+			quidu      	"552AE4C502BC"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"552A89AE0105"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	1038
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Use Case View::Читатель" @1
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(292, 1716)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(292, 1876)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Читатель")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"552A8D9301A0"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Возврат книги" @2
+			location   	(856, 1352)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(856, 1490)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Возврат книги")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552A902A0094"
+			height     	118)
+		    (object UseCaseView "Use Case View::Авторизация" @3
+			location   	(856, 1718)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(856, 1856)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Авторизация")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552AA2D803DB"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$108" @4
+			location   	(547, 1715)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E46B60313"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$109" @5
+				Parent_View 	@4
+				location   	(152, 7)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46B7016D"
+				client     	@4
+				supplier   	@3
+				vertices   	(list Points
+				    (547, 1715)
+				    (745, 1715))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$110" @6
+				Parent_View 	@4
+				location   	(152, 7)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46B7017C"
+				client     	@4
+				supplier   	@1
+				vertices   	(list Points
+				    (547, 1715)
+				    (349, 1716))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$114" @7
+			location   	(856, 1587)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E46EF0126"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$115" @8
+				Parent_View 	@7
+				location   	(0, -131)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46EF03A7"
+				client     	@7
+				supplier   	@2
+				vertices   	(list Points
+				    (856, 1587)
+				    (856, 1515))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$116" @9
+				Parent_View 	@7
+				location   	(0, -131)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46EF03B6"
+				client     	@7
+				supplier   	@3
+				vertices   	(list Points
+				    (856, 1587)
+				    (856, 1659))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Просмотр каталога" @10
+			location   	(1267, 1714)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1267, 1852)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Просмотр каталога")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552E43E0034C"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$111" @11
+			location   	(1060, 1713)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E46EB0177"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$112" @12
+				Parent_View 	@11
+				location   	(216, -5)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46EB032C"
+				client     	@11
+				supplier   	@10
+				vertices   	(list Points
+				    (1060, 1713)
+				    (1156, 1713))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$113" @13
+				Parent_View 	@11
+				location   	(216, -5)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46EB032E"
+				client     	@11
+				supplier   	@3
+				vertices   	(list Points
+				    (1060, 1713)
+				    (964, 1714))
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::База данных" @14
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1875, 773)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(1875, 933)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"База данных")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"552A8F97007D"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object DependencyView "" @15
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E4702006C"
+			client     	@2
+			supplier   	@14
+			vertices   	(list Points
+			    (949, 1294)
+			    (1815, 804))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Запрос отчетов по книгам" @16
+			location   	(860, 781)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(860, 919)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Запрос отчетов по книгам")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552AEBFE03A3"
+			height     	118)
+		    (object DependencyView "" @17
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E45B20396"
+			client     	@16
+			supplier   	@14
+			vertices   	(list Points
+			    (968, 777)
+			    (1815, 773))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Работа с каталогом" @18
+			location   	(865, 459)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(865, 597)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Работа с каталогом")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552AE97F0040"
+			height     	118)
+		    (object UseCaseView "Use Case View::Работа с базой" @19
+			location   	(865, 1090)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(865, 1228)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Работа с базой")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552E7D3D0019"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::Администратор" @20
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(291, 779)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(291, 939)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Администратор")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"552AE9450043"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$72" @21
+			location   	(549, 778)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552AEC11006C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$73" @22
+				Parent_View 	@21
+				location   	(-82, -1269)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552AEC1102D4"
+				client     	@21
+				supplier   	@16
+				vertices   	(list Points
+				    (549, 778)
+				    (750, 778))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$74" @23
+				Parent_View 	@21
+				location   	(-82, -1269)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552AEC1102E5"
+				client     	@21
+				supplier   	@20
+				vertices   	(list Points
+				    (549, 778)
+				    (348, 779))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$57" @24
+			location   	(512, 652)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552AE9850033"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$58" @25
+				Parent_View 	@24
+				location   	(-119, -1395)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552AE98503C2"
+				client     	@24
+				supplier   	@18
+				vertices   	(list Points
+				    (512, 652)
+				    (677, 561))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$59" @26
+				Parent_View 	@24
+				location   	(-119, -1395)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552AE98503C4"
+				client     	@24
+				supplier   	@20
+				vertices   	(list Points
+				    (512, 652)
+				    (348, 743))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$132" @27
+			location   	(554, 919)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E7D4F0159"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$133" @28
+				Parent_View 	@27
+				location   	(263, 140)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E7D50005D"
+				client     	@27
+				supplier   	@19
+				vertices   	(list Points
+				    (554, 919)
+				    (760, 1031))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$134" @29
+				Parent_View 	@27
+				location   	(263, 140)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E7D50005F"
+				client     	@27
+				supplier   	@20
+				vertices   	(list Points
+				    (554, 919)
+				    (348, 808))
+				line_style 	0)))
+		    (object DependencyView "" @30
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E7D56000B"
+			client     	@19
+			supplier   	@14
+			vertices   	(list Points
+			    (973, 1052)
+			    (1816, 788))
+			line_style 	0)
+		    (object DependencyView "" @31
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E82F3022D"
+			client     	@18
+			supplier   	@14
+			vertices   	(list Points
+			    (1052, 515)
+			    (1816, 750))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Заказ книги" @32
+			location   	(1262, 1353)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@32
+			    location   	(1262, 1491)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Заказ книги")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"552AE4C502BC"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$120" @33
+			location   	(1263, 1586)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"552E46F702BD"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$121" @34
+				Parent_View 	@33
+				location   	(-4, -128)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46F80108"
+				client     	@33
+				supplier   	@32
+				vertices   	(list Points
+				    (1263, 1586)
+				    (1263, 1516))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$122" @35
+				Parent_View 	@33
+				location   	(-4, -128)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"552E46F8010A"
+				client     	@33
+				supplier   	@10
+				vertices   	(list Points
+				    (1263, 1586)
+				    (1263, 1656))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Формирование заказа" @36
+			location   	(1659, 1353)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@36
+			    location   	(1659, 1491)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Формирование заказа")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5537B4F701F6"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$135" @37
+			location   	(1459, 1353)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5537B503001B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$136" @38
+				Parent_View 	@37
+				location   	(197, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B5030276"
+				client     	@37
+				supplier   	@36
+				vertices   	(list Points
+				    (1459, 1353)
+				    (1549, 1353))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$137" @39
+				Parent_View 	@37
+				location   	(197, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B5030278"
+				client     	@37
+				supplier   	@32
+				vertices   	(list Points
+				    (1459, 1353)
+				    (1370, 1353))
+				line_style 	0)))
+		    (object DependencyView "" @40
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5537B50A017D"
+			client     	@36
+			supplier   	@14
+			vertices   	(list Points
+			    (1677, 1295)
+			    (1808, 958))
+			line_style 	0)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"552A89AA0012"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"552A89AA0014"
+	logical_models 	(list unit_reference_list
+	    (object Class "Catalogue"
+		quid       	"55363CD7007F"
+		operations 	(list Operations
+		    (object Operation "update"
+			quid       	"553643230136"
+			result     	"void"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "books List"
+			quid       	"55363CEB03E6"
+			stereotype 	"Book")))
+	    (object Class "Library"
+		quid       	"5536403002B0"
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"553645FB01D0"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"))
+		operations 	(list Operations
+		    (object Operation "registerUser"
+			quid       	"553643980057"
+			parameters 	(list Parameters
+			    (object Parameter "User"
+				quid       	"5536444E00B0"))
+			result     	"int"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "editUser"
+			quid       	"553643B6017F"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "deleteUser"
+			quid       	"553644420209"
+			parameters 	(list Parameters
+			    (object Parameter "int index"
+				quid       	"553644B600C0"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "giveBook"
+			quid       	"553644B600A3"
+			parameters 	(list Parameters
+			    (object Parameter "int"
+				quid       	"553644CC0053"))
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "acceptBook"
+			quid       	"553644D10245"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "givenBooksWithinPeriod"
+			quid       	"553644D800DB"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "returnedBooksWithinPerion"
+			quid       	"553644EB01C8"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "booksOccupiedByUser"
+			quid       	"553644F802A5"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "checkBookAvailability"
+			quid       	"55364506030A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "catalogue"
+			quid       	"553643500237"
+			type       	"Catalogue"
+			quidu      	"55363CD7007F")
+		    (object ClassAttribute "<User>users"
+			quid       	"5536435D0384"
+			type       	"List")
+		    (object ClassAttribute "orders"
+			quid       	"5536437A0014"
+			stereotype 	"Order"
+			type       	"List")))
+	    (object Class "Book"
+		quid       	"5536403A014E"
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"553648D20122"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "title"
+			quid       	"5536419502EF"
+			type       	"String")
+		    (object ClassAttribute "publishingDate"
+			quid       	"553641B50006"
+			type       	"Date")
+		    (object ClassAttribute "libraryKey"
+			quid       	"553641BF0143"
+			type       	"int")
+		    (object ClassAttribute "publishingHouse"
+			quid       	"553641D10139"
+			type       	"String")
+		    (object ClassAttribute "publishingPlace"
+			quid       	"553641EA01E9"
+			type       	"String")
+		    (object ClassAttribute "occupiedBy"
+			quid       	"553641FD0077"
+			type       	"User"
+			quidu      	"55364277036F")
+		    (object ClassAttribute "<Author>authors"
+			quid       	"553642180229"
+			type       	"List")))
+	    (object Class "Author"
+		quid       	"553640400167"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "name"
+			quid       	"55364254023F"
+			type       	"String")
+		    (object ClassAttribute "surname"
+			quid       	"55364259004D"
+			type       	"String")
+		    (object ClassAttribute "patronymic"
+			quid       	"5536425E02B2"
+			type       	"String")
+		    (object ClassAttribute "id"
+			quid       	"5536426400C1"
+			type       	"int")))
+	    (object Class "Order"
+		quid       	"5536404702C5"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "books"
+			quid       	"5536405500B6"
+			stereotype 	"Book"
+			type       	"List")
+		    (object ClassAttribute "user"
+			quid       	"5536412A0103"
+			type       	"User"
+			quidu      	"55364277036F")))
+	    (object Class "User"
+		quid       	"55364277036F"
+		used_nodes 	(list uses_relationship_list
+		    (object Uses_Relationship
+			quid       	"5536469C0000"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			supplier_cardinality 	(value cardinality "0..1")
+			client_cardinality 	(value cardinality "0..1")))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "name"
+			quid       	"553642A10267"
+			type       	"String")
+		    (object ClassAttribute "surname"
+			quid       	"553642AC01D0"
+			type       	"String")
+		    (object ClassAttribute "patronymic"
+			quid       	"553642B203CB"
+			type       	"String")
+		    (object ClassAttribute "libraryCard"
+			quid       	"553642B900DF"
+			type       	"int")
+		    (object ClassAttribute "checkInDate"
+			quid       	"553642CC007C"
+			type       	"Date")))
+	    (object Association "$UNNAMED$138"
+		quid       	"553645390369"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$139"
+			quid       	"5536453C0018"
+			supplier   	"Logical View::Author"
+			quidu      	"553640400167"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$140"
+			quid       	"5536453C001B"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$141"
+		quid       	"553645480354"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$142"
+			quid       	"5536454902EF"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$143"
+			quid       	"5536454902F3"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$144"
+		quid       	"5536456D00E4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$145"
+			quid       	"5536456E003F"
+			supplier   	"Logical View::Author"
+			quidu      	"553640400167"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$146"
+			quid       	"5536456E0043"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E")))
+	    (object Association "$UNNAMED$147"
+		quid       	"55364580012F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$148"
+			quid       	"553645810028"
+			supplier   	"Logical View::Author"
+			quidu      	"553640400167"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$149"
+			quid       	"55364581002E"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E")))
+	    (object Association "$UNNAMED$150"
+		quid       	"5536459E01C6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$151"
+			quid       	"5536459F011F"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$152"
+			quid       	"5536459F0123"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0")))
+	    (object Association "$UNNAMED$153"
+		quid       	"553645BA0339"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$154"
+			quid       	"553645BB0238"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$155"
+			quid       	"553645BB023F"
+			supplier   	"Logical View::Order"
+			quidu      	"5536404702C5")))
+	    (object Association "$UNNAMED$156"
+		quid       	"553645BE006A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$157"
+			quid       	"553645BE02E0"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$158"
+			quid       	"553645BE02E4"
+			supplier   	"Logical View::Order"
+			quidu      	"5536404702C5")))
+	    (object Association "$UNNAMED$159"
+		quid       	"5536461A0349"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$160"
+			quid       	"5536461B01FF"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$161"
+			quid       	"5536461B020A"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0")))
+	    (object Association "$UNNAMED$162"
+		quid       	"5536462E02A6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$163"
+			quid       	"5536462F009F"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$164"
+			quid       	"5536462F00A9"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$165"
+		quid       	"5536463902A9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$166"
+			quid       	"5536463A0061"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$167"
+			quid       	"5536463A0068"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E")))
+	    (object Association "$UNNAMED$168"
+		quid       	"5536465E01D2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$169"
+			quid       	"5536465F0208"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$170"
+			quid       	"5536465F020D"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$171"
+		quid       	"5536473703BE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$172"
+			quid       	"553647380151"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$173"
+			quid       	"55364738015A"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$174"
+		quid       	"5536474601A1"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$175"
+			quid       	"553647470028"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$176"
+			quid       	"55364747002F"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$177"
+		quid       	"5536474C02BF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$178"
+			quid       	"5536474D00B7"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$179"
+			quid       	"5536474D00C6"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$180"
+		quid       	"5536479A01C2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$181"
+			quid       	"5536479B0189"
+			supplier   	"Logical View::Order"
+			quidu      	"5536404702C5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$182"
+			quid       	"5536479B018F"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0")))
+	    (object Association "$UNNAMED$183"
+		quid       	"553647A20137"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$184"
+			quid       	"553647A20370"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$185"
+			quid       	"553647A2037B"
+			supplier   	"Logical View::Order"
+			quidu      	"5536404702C5")))
+	    (object Association "$UNNAMED$186"
+		quid       	"5537B76D0113"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$187"
+			quid       	"5537B76D031C"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$188"
+			quid       	"5537B76D0329"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$189"
+		quid       	"5537B7750353"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$190"
+			quid       	"5537B7760144"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$191"
+			quid       	"5537B776014C"
+			supplier   	"Logical View::Library"
+			quidu      	"5536403002B0")))
+	    (object Association "$UNNAMED$192"
+		quid       	"5537B78A0382"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$193"
+			quid       	"5537B78B00AB"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$194"
+			quid       	"5537B78B00BB"
+			supplier   	"Logical View::Author"
+			quidu      	"553640400167")))
+	    (object Association "$UNNAMED$195"
+		quid       	"5537B7930329"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$196"
+			quid       	"5537B79600B5"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$197"
+			quid       	"5537B79600C0"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$198"
+		quid       	"5537B7A201EB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$199"
+			quid       	"5537B7A202DC"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$200"
+			quid       	"5537B7A202EF"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$201"
+		quid       	"5537B7AA02BB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$202"
+			quid       	"5537B7AB0135"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$203"
+			quid       	"5537B7AB0141"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$204"
+		quid       	"5537B7B603DC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$205"
+			quid       	"5537B7B702D5"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$206"
+			quid       	"5537B7B702E2"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$207"
+		quid       	"5537B7C302C5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$208"
+			quid       	"5537B7C4006C"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$209"
+			quid       	"5537B7C40082"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$210"
+		quid       	"5537B7CA00EE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$211"
+			quid       	"5537B7CA022C"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$212"
+			quid       	"5537B7CA023B"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$213"
+		quid       	"5537B7D40291"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$214"
+			quid       	"5537B7D501F3"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$215"
+			quid       	"5537B7D50200"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$216"
+		quid       	"5537B7DD03DD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$217"
+			quid       	"5537B7DE0144"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$218"
+			quid       	"5537B7DE015E"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$219"
+		quid       	"5537B7E90068"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$220"
+			quid       	"5537B7EA0035"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$221"
+			quid       	"5537B7EA0045"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$222"
+		quid       	"5537B7F103E2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$223"
+			quid       	"5537B7F2014E"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$224"
+			quid       	"5537B7F20168"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$225"
+		quid       	"5537B8370144"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$226"
+			quid       	"5537B83702ED"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$227"
+			quid       	"5537B8370301"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)))
+	    (object Association "$UNNAMED$228"
+		quid       	"5537B83D012F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$229"
+			quid       	"5537B83D02BC"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$230"
+			quid       	"5537B83D02D7"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F")))
+	    (object Association "$UNNAMED$231"
+		quid       	"5537B87A02FA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$232"
+			quid       	"5537B87B00CD"
+			supplier   	"Logical View::Catalogue"
+			quidu      	"55363CD7007F"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$233"
+			quid       	"5537B87B00E2"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$234"
+		quid       	"5537BD94034B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$235"
+			quid       	"5537BD95021E"
+			supplier   	"Logical View::User"
+			quidu      	"55364277036F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$236"
+			quid       	"5537BD950226"
+			supplier   	"Logical View::Book"
+			quidu      	"5536403A014E"))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"552A89AE0142"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	463
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::Order" @41
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1179, 978)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(942, 872)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	474
+			    justify    	0
+			    label      	"Order")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5536404702C5"
+			compartment 	(object Compartment
+			    Parent_View 	@41
+			    location   	(942, 933)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	478
+			    justify    	1)
+			width      	492
+			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Library" @42
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2154, 1484)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@42
+			    location   	(1870, 1128)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	568
+			    justify    	0
+			    label      	"Library")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5536403002B0"
+			compartment 	(object Compartment
+			    Parent_View 	@42
+			    location   	(1870, 1189)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	13
+			    max_width  	578
+			    justify    	1)
+			width      	586
+			height     	736
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$183" @43
+			location   	(1633, 1213)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"553647A20137"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$184" @44
+				Parent_View 	@43
+				location   	(454, 235)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553647A20370"
+				client     	@43
+				supplier   	@42
+				vertices   	(list Points
+				    (1633, 1213)
+				    (1860, 1331))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$185" @45
+				Parent_View 	@43
+				location   	(454, 235)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553647A2037B"
+				client     	@43
+				supplier   	@41
+				vertices   	(list Points
+				    (1633, 1213)
+				    (1409, 1096))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::Author" @46
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(431, 1483)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@46
+			    location   	(234, 1327)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	394
+			    justify    	0
+			    label      	"Author")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"553640400167"
+			compartment 	(object Compartment
+			    Parent_View 	@46
+			    location   	(234, 1388)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	5
+			    max_width  	403
+			    justify    	1)
+			width      	412
+			height     	336
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Catalogue" @47
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1177, 2051)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@47
+			    location   	(952, 1945)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"Catalogue")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"55363CD7007F"
+			compartment 	(object Compartment
+			    Parent_View 	@47
+			    location   	(952, 2006)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	453
+			    justify    	1)
+			width      	468
+			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$171" @48
+			location   	(1618, 1792)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5536473703BE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$172" @49
+				Parent_View 	@48
+				location   	(441, -259)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553647380151"
+				client     	@48
+				supplier   	@42
+				vertices   	(list Points
+				    (1618, 1792)
+				    (1860, 1652))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$173" @50
+				Parent_View 	@48
+				location   	(441, -259)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"55364738015A"
+				client     	@48
+				supplier   	@47
+				vertices   	(list Points
+				    (1618, 1792)
+				    (1377, 1932))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::Book" @51
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1178, 1488)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@51
+			    location   	(930, 1257)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	496
+			    justify    	0
+			    label      	"Book")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5536403A014E"
+			compartment 	(object Compartment
+			    Parent_View 	@51
+			    location   	(930, 1318)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	8
+			    max_width  	500
+			    justify    	1)
+			width      	514
+			height     	486
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$153" @52
+			location   	(1178, 1170)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"553645BA0339"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$154" @53
+				Parent_View 	@52
+				location   	(8, 470)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553645BB0238"
+				client     	@52
+				supplier   	@51
+				vertices   	(list Points
+				    (1178, 1170)
+				    (1178, 1244))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$155" @54
+				Parent_View 	@52
+				location   	(8, 470)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553645BB023F"
+				client     	@52
+				supplier   	@41
+				vertices   	(list Points
+				    (1178, 1170)
+				    (1178, 1096))
+				line_style 	0)))
+		    (object UsesView "" @55
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"553645FB01D0"
+			client     	@42
+			supplier   	@51
+			vertices   	(list Points
+			    (1860, 1485)
+			    (1435, 1486))
+			line_style 	0)
+		    (object AssociationViewNew "$UNNAMED$192" @56
+			location   	(778, 1484)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5537B78A0382"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$193" @57
+				Parent_View 	@56
+				location   	(347, 1)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B78B00AB"
+				client     	@56
+				supplier   	@51
+				vertices   	(list Points
+				    (778, 1484)
+				    (920, 1485))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$194" @58
+				Parent_View 	@56
+				location   	(347, 1)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B78B00BB"
+				client     	@56
+				supplier   	@46
+				vertices   	(list Points
+				    (778, 1484)
+				    (637, 1484))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$231" @59
+			location   	(1177, 1831)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5537B87A02FA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$232" @60
+				Parent_View 	@59
+				location   	(-1, 343)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B87B00CD"
+				client     	@59
+				supplier   	@47
+				vertices   	(list Points
+				    (1177, 1831)
+				    (1177, 1932))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$233" @61
+				Parent_View 	@59
+				location   	(-1, 343)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B87B00E2"
+				client     	@59
+				supplier   	@51
+				vertices   	(list Points
+				    (1177, 1831)
+				    (1177, 1731))
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::User" @62
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2145, 464)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@62
+			    location   	(1944, 283)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	402
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"55364277036F"
+			compartment 	(object Compartment
+			    Parent_View 	@62
+			    location   	(1944, 344)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	6
+			    max_width  	406
+			    justify    	1)
+			width      	420
+			height     	386
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$156" @63
+			location   	(1666, 717)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"553645BE006A"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$157" @64
+				Parent_View 	@63
+				location   	(496, 17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553645BE02E0"
+				client     	@63
+				supplier   	@62
+				vertices   	(list Points
+				    (1666, 717)
+				    (1934, 574))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$158" @65
+				Parent_View 	@63
+				location   	(496, 17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"553645BE02E4"
+				client     	@63
+				supplier   	@41
+				vertices   	(list Points
+				    (1666, 717)
+				    (1397, 859))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$189" @66
+			location   	(2148, 886)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5537B7750353"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$190" @67
+				Parent_View 	@66
+				location   	(-6, -598)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B7760144"
+				client     	@66
+				supplier   	@62
+				vertices   	(list Points
+				    (2148, 886)
+				    (2146, 657))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$191" @68
+				Parent_View 	@66
+				location   	(-6, -598)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5537B776014C"
+				client     	@66
+				supplier   	@42
+				vertices   	(list Points
+				    (2148, 886)
+				    (2150, 1115))
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"552A89AA0014"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"552A89AE0104"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"552A89AA0012")
+    process_structure 	(object Processes
+	quid       	"552A89AA0015"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"552A89AA0017"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"552A89AA0016"))

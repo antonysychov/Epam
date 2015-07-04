@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://aaa.com/Purchase first.xsd"
+    xmlns:myspace="http://aaa.com/Purchase">
+   <person id="a001">
+    <firstName>Vasya</firstName>
+    <secondName>Ivanov</secondName>
+    <placeOfBirth>
+        <myspace:city>Kiev</myspace:city>
+        <myspace:country>Ukraine</myspace:country>
+    </placeOfBirth>
+   </person> 
+   <person id="a002">
+        <firstName>Petya</firstName>
+        <secondName>Sidorov</secondName>
+        <placeOfBirth>
+            <myspace:city>Gmerenka</myspace:city>
+            <myspace:country>Ukraine</myspace:country>
+        </placeOfBirth>
+          
+    </person>
+    
+</root>
