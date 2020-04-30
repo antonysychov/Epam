@@ -11,6 +11,7 @@ public class TypesSize {
         System.out.println(Integer.MIN_VALUE);
     }
 
+
     static int byteSize() {
         byte b = 1;
         int size = 1;
